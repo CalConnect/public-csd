@@ -1,0 +1,6 @@
+[submodule "csd-admin-documents"]
+	path = csd-admin-documents
+	url = git@github.com:CalConnect/csd-admin-documents.git
+[submodule "csd-vpoll"]
+	path = csd-vpoll
+	url = git@github.com:CalConnect/csd-vpoll.git

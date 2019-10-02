@@ -4,3 +4,72 @@
 [submodule "csd-vpoll"]
 	path = csd-vpoll
 	url = git@github.com:CalConnect/csd-vpoll.git
+[submodule "csd-datetime-explicit"]
+	path = csd-datetime-explicit
+	url = git@github.com:CalConnect/csd-datetime-explicit.git
+[submodule "csd-vobject-vformat"]
+	path = csd-vobject-vformat
+	url = git@github.com:CalConnect/csd-vobject-vformat.git
+[submodule "csd-subscription-upgrade"]
+	path = csd-subscription-upgrade
+	url = git@github.com:CalConnect/csd-subscription-upgrade.git
+[submodule "csd-icalendar-series"]
+	path = csd-icalendar-series
+	url = git@github.com:CalConnect/csd-icalendar-series.git
+[submodule "csd-ipr-policy"]
+	path = csd-ipr-policy
+	url = git@github.com:CalConnect/csd-ipr-policy.git
+[submodule "csd-wto-tbt-principles"]
+	path = csd-wto-tbt-principles
+	url = git@github.com:CalConnect/csd-wto-tbt-principles.git
+[submodule "csd-ical-relations"]
+	path = csd-ical-relations
+	url = git@github.com:CalConnect/csd-ical-relations.git
+[submodule "csd-eu-dst-recommendation"]
+	path = csd-eu-dst-recommendation
+	url = git@github.com:CalConnect/csd-eu-dst-recommendation.git
+[submodule "csd-citation-models"]
+	path = csd-citation-models
+	url = git@github.com:CalConnect/csd-citation-models.git
+[submodule "csd-iso-psdo-agreement"]
+	path = csd-iso-psdo-agreement
+	url = git@github.com:CalConnect/csd-iso-psdo-agreement.git
+[submodule "csd-calendar-systems"]
+	path = csd-calendar-systems
+	url = git@github.com:CalConnect/csd-calendar-systems.git
+[submodule "csd-directive-standardization-publication"]
+	path = csd-directive-standardization-publication
+	url = git@github.com:CalConnect/csd-directive-standardization-publication.git
+[submodule "csd-directive-ipr-guidelines"]
+	path = csd-directive-ipr-guidelines
+	url = git@github.com:CalConnect/csd-directive-ipr-guidelines.git
+[submodule "csd-patent-policy"]
+	path = csd-patent-policy
+	url = git@github.com:CalConnect/csd-patent-policy.git
+[submodule "csd-lightweight-doc"]
+	path = csd-lightweight-doc
+	url = git@github.com:CalConnect/csd-lightweight-doc.git
+[submodule "csd-timescale-registry"]
+	path = csd-timescale-registry
+	url = git@github.com:CalConnect/csd-timescale-registry.git
+[submodule "csd-name-models"]
+	path = csd-name-models
+	url = git@github.com:CalConnect/csd-name-models.git
+[submodule "csd-directive-document-requirements"]
+	path = csd-directive-document-requirements
+	url = git@github.com:CalConnect/csd-directive-document-requirements.git
+[submodule "csd-general-recurrence"]
+	path = csd-general-recurrence
+	url = git@github.com:CalConnect/csd-general-recurrence.git
+[submodule "csd-datetime-terminology"]
+	path = csd-datetime-terminology
+	url = git@github.com:CalConnect/csd-datetime-terminology.git
+[submodule "csd-calspam-bcp"]
+	path = csd-calspam-bcp
+	url = git@github.com:CalConnect/csd-calspam-bcp.git
+[submodule "csd-vobject-i18n"]
+	path = csd-vobject-i18n
+	url = git@github.com:CalConnect/csd-vobject-i18n.git
+[submodule "csd-timezone-model"]
+	path = csd-timezone-model
+	url = git@github.com:CalConnect/csd-timezone-model.git

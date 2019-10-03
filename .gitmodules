@@ -28,9 +28,6 @@
 [submodule "csd-eu-dst-recommendation"]
 	path = csd-eu-dst-recommendation
 	url = git@github.com:CalConnect/csd-eu-dst-recommendation.git
-[submodule "csd-citation-models"]
-	path = csd-citation-models
-	url = git@github.com:CalConnect/csd-citation-models.git
 [submodule "csd-iso-psdo-agreement"]
 	path = csd-iso-psdo-agreement
 	url = git@github.com:CalConnect/csd-iso-psdo-agreement.git

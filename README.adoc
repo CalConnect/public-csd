@@ -1,0 +1,48 @@
+= Public CalConnect document repos for the CalConnect document repository
+
+== Initialization
+
+[source,sh]
+----
+git submodule update --init --recursive
+----
+
+
+== Build all documents
+
+[source,sh]
+----
+git submodule foreach make clean all
+----
+
+
+== Clean all document repos
+
+[source,sh]
+----
+git submodule foreach git clean -f -d
+----
+
+
+== Add a document repo
+
+[source,sh]
+----
+git submodule add ssh://git@github.com/calconnect/csd-[foo-bar]
+----
+
+
+== Publish all documents
+
+TODO
+
+
+== Update gems for all documents
+
+[source,sh]
+----
+git submodule foreach bundle update
+git submodule foreach git add Gemfile.lock
+git submodule foreach git commit -m 'Update gems'
+git submodule foreach git push
+----

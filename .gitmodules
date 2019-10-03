@@ -73,3 +73,9 @@
 [submodule "csd-timezone-model"]
 	path = csd-timezone-model
 	url = git@github.com:CalConnect/csd-timezone-model.git
+[submodule "csd-transcription-systems"]
+	path = csd-transcription-systems
+	url = ssh://git@github.com/CalConnect/csd-transcription-systems.git
+[submodule "csd-digital-addresses"]
+	path = csd-digital-addresses
+	url = ssh://git@github.com/CalConnect/csd-digital-addresses.git

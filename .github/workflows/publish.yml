@@ -1,0 +1,59 @@
+name: Update published-csd repo
+
+on:
+  push:
+    branches: master
+
+jobs:
+  compile:
+    runs-on: ubuntu-lastes
+    steps:
+      - uses: actions/checkout@master
+      - name: Checkout submodules
+      shell: bash
+      run: |
+        auth_header="$(git config --local --get http.https://github.com/.extraheader)"
+        git submodule sync --recursive
+        git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --force --recursive --depth=1
+      - name: Install yq
+        run: |
+          sudo snap install yq
+      - name: Use Ruby
+        uses: actions/setup-ruby@v1
+        with:
+          ruby-version: '2.6'
+          architecture: 'x64'
+      - name: Update gems
+        run: |
+          gem install bundler -v "~> 2"
+          bundle update --bundler
+          bundle install --jobs 4 --retry 3
+      - name: Install Metanorma
+        run: |
+          sudo apt-get install -y libxml2-dev libxslt1-dev libicu-dev zlib1g-dev
+          curl -L https://raw.githubusercontent.com/metanorma/metanorma-linux-setup/master/ubuntu.sh | sudo bash
+      - name: Metanorma compile
+        env:
+          JAVA_OPTS: "java.awt.headless=true"
+        run: ./makeall.sh
+      - uses: actions/upload-artifact@master
+        with:
+          name: published
+          path: published
+
+  update:
+    runs-on: ubuntu-lastes
+    steps:
+      - uses: actions/checkout@master
+        with:
+          repository: calconnect/published-csd
+      - uses: actions/download-artifact@v1
+        with:
+          name: published
+      - name: Push updates
+        run: |
+          cp compiled/*.xml ./
+          rm -rf compiled
+          git add .
+          git commit -m 'Update documents'
+          git push

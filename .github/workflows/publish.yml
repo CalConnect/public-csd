@@ -6,7 +6,8 @@ on:
 
 jobs:
   compile:
-    runs-on: ubuntu-lastes
+    name: Compile public-csd submodules
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
       - name: Checkout submodules

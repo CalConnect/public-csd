@@ -12,10 +12,15 @@ jobs:
       - uses: actions/checkout@master
       - name: Checkout submodules
         shell: bash
+        # run: |
+        #   auth_header="$(git config --local --get http.https://github.com/.extraheader)"
+        #   git submodule sync --recursive
+        #   git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --force --recursive --depth=1
         run: |
-          auth_header="$(git config --local --get http.https://github.com/.extraheader)"
+          # From https://github.com/actions/checkout/issues/116#issuecomment-583221947
+          git config --global url."https://github.com/".insteadOf "git@github.com:"
           git submodule sync --recursive
-          git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --force --recursive --depth=1
+          git -c "http.extraheader=Authorization: basic ${{secrets.GITHUB_ACCESS_TOKEN}}" -c protocol.version=2 submodule update --init --force --recursive --depth=1
       - name: Install yq
         run: |
           sudo snap install yq
@@ -43,6 +48,8 @@ jobs:
           path: published
 
   update:
+    name: Update published-csd
+    needs: compile
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master

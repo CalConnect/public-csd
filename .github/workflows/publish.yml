@@ -43,7 +43,7 @@ jobs:
           path: published
 
   update:
-    runs-on: ubuntu-lastes
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
         with:
